@@ -10,60 +10,9 @@ import java.util.Date;
  *
  * @author lenovo
  */
-public sealed class Client implements Personne permits ClientMoncash{
-    private String nom;
-    private String prenom;
-    private Date dateNaissance;
-    private char sexe;
-    private String phone;
-    @Override
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    @Override
-    public String getNom() {
-        return this.nom;
-    }
-
-    @Override
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    @Override
-    public String getPrenom() {
-        return this.prenom;
-    }
-
-    @Override
-    public void setDateNaissance(Date dateNaissance) {
-        this.dateNaissance=dateNaissance;
-    }
-
-    @Override
-    public Date getDateNaissance() {
-        return this.dateNaissance;
-    }
-
-    @Override
-    public void setSexe(char Sexe) {
-        this.sexe = sexe;
-    }
-
-    @Override
-    public char getSexe() {
-        return this.sexe;
-    }
-
-    @Override
-    public void setPhone(String phone) {
-        this.phone =phone;
-    }
-
-    @Override
-    public String getPhone() {
-        return this.phone;
-    }
+public sealed class Client extends Personne permits ClientMoncash{
+    
+    
+    
     
 }

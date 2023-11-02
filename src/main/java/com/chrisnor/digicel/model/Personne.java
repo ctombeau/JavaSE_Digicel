@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.chrisnor.digicel.model;
 
@@ -10,30 +10,70 @@ import java.util.Date;
  *
  * @author lenovo
  */
-public sealed interface Personne permits Client, Employee{
-//      String NOM="";
-//      String PRENOM="";
-//      Date DATE_NAISSANCE=null;
-//      char SEXE=0;
-//      String PHONE="";
-      
-      void setNom(String nom);
-      String getNom();
-      
-      void setPrenom(String prenom);
-      String getPrenom();
-      
-      void setDateNaissance(Date dateNaissance);
-      Date getDateNaissance();
-      
-      void setSexe(char Sexe);
-      char getSexe();
-      
-      void setPhone(String phone);
-      String getPhone();
-      
-      default String getNomComplet()
-      {
-          return getNom() + " " + getPrenom();
-      }
+public sealed class Personne permits Client,Employee{
+    private String nom;
+    private String prenom;
+    private Date dateNaissance;
+    private char sexe;
+    private String phone;
+    
+    public Personne(){}
+    
+    public Personne(String nom, String prenom, Date dateNaissance, char sexe, String phone)
+    {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.dateNaissance = dateNaissance;
+        this.sexe = sexe;
+        this.phone = phone;
+    }
+    
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    
+    public String getNom() {
+        return this.nom;
+    }
+
+    
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    
+    public String getPrenom() {
+        return this.prenom;
+    }
+
+   
+    public void setDateNaissance(Date dateNaissance) {
+        this.dateNaissance=dateNaissance;
+    }
+
+    
+    public Date getDateNaissance() {
+        return this.dateNaissance;
+    }
+
+   
+    public void setSexe(char Sexe) {
+        this.sexe = sexe;
+    }
+
+    
+    public char getSexe() {
+        return this.sexe;
+    }
+
+    
+    public void setPhone(String phone) {
+        this.phone =phone;
+    }
+
+    
+    public String getPhone() {
+        return this.phone;
+    }
 }
