@@ -4,6 +4,7 @@
  */
 package com.chrisnor.digicel.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -13,13 +14,13 @@ import java.util.Date;
 public sealed class Personne permits Client,Employee{
     private String nom;
     private String prenom;
-    private Date dateNaissance;
+    private LocalDate dateNaissance;
     private char sexe;
     private String phone;
     
     public Personne(){}
     
-    public Personne(String nom, String prenom, Date dateNaissance, char sexe, String phone)
+    public Personne(String nom, String prenom, LocalDate dateNaissance, char sexe, String phone)
     {
         this.nom = nom;
         this.prenom = prenom;
@@ -48,12 +49,12 @@ public sealed class Personne permits Client,Employee{
     }
 
    
-    public void setDateNaissance(Date dateNaissance) {
+    public void setDateNaissance(LocalDate dateNaissance) {
         this.dateNaissance=dateNaissance;
     }
 
     
-    public Date getDateNaissance() {
+    public LocalDate getDateNaissance() {
         return this.dateNaissance;
     }
 
